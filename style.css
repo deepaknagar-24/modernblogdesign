@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: 1.4rem;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  font-size: 2rem;
+  border-bottom: 2px transparent;
+}
+
+nav ul li:hover {
+  border-bottom: 2px solid rgb(6, 6, 71);
+}
+
+nav i {
+  font-size: 2.6rem;
+  display: none; /* mobile menu icon will show in responsive */
+}
+
+/* ---------- MAIN ---------- */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-content h1 {
+  font-size: 6rem;
+  line-height: 1.2;
+}
+
+.hero-content h4 {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.hero-img img {
+  border-radius: 5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- HORIZONTAL CARD ---------- */
+.h-card {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  box-shadow: 4px 5px 4px rgba(221, 221, 221, 0.25);
+  border: 1px solid #e2e2e2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.read-btn {
+  all: unset;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.read-btn:hover {
+  border-bottom: 1px solid #ccc;
+}
+
+/* ---------- GRID CARDS ---------- */
+.card-container {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.v-card {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 100%;
+  align-items: center;
+  box-shadow: 4px 5px 4px rgba(221, 221, 221, 0.25);
+  border: 1px solid #e2e2e2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.v-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+footer ul li {
+  font-size: 1.8rem;
+}
+
+/* ---------- BLOG / POST ---------- */
+.banner-img img {
+  width: 100%;
+  height: auto;
+}
+
+.post h1 {
+  font-size: 3rem;
+}
+
+.about-author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post hr {
+  margin: 3rem 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 4.5rem;
+  }
+  .hero-content h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide nav links */
+  }
+  nav i {
+    display: block; /* show mobile menu icon */
+    cursor: pointer;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  .hero-content h4 {
+    font-size: 1.8rem;
+  }
+  .h-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+  nav h1 {
+    font-size: 2rem;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content h4 {
+    font-size: 1.6rem;
+  }
+  .post h1 {
+    font-size: 2.4rem;
+  }
+}
